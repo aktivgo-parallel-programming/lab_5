@@ -1,8 +1,0 @@
-C:/Study/parallel_programming/lab_5/cmake-build-debug/CMakeFiles/task_0.dir
-C:/Study/parallel_programming/lab_5/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Study/parallel_programming/lab_5/cmake-build-debug/CMakeFiles/task_1.dir
-C:/Study/parallel_programming/lab_5/cmake-build-debug/CMakeFiles/task_2.dir
-C:/Study/parallel_programming/lab_5/cmake-build-debug/CMakeFiles/task_3.dir
-C:/Study/parallel_programming/lab_5/cmake-build-debug/CMakeFiles/task_4.dir
-C:/Study/parallel_programming/lab_5/cmake-build-debug/CMakeFiles/task_5.dir
-C:/Study/parallel_programming/lab_5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
