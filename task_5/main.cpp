@@ -41,7 +41,7 @@ int main() {
             }
             #pragma omp section
             {
-                #pragma omp parallel private(localPowSum)
+                #pragma omp parallel num_threads(K) private(localPowSum)
                 {
                     localPowSum = 0;
                     #pragma omp for schedule(static)
