@@ -1,6 +1,7 @@
 #include <iostream>
 #include <omp.h>
 #include <vector>
+#include <cmath>
 
 long largest_prime_divisor(long);
 

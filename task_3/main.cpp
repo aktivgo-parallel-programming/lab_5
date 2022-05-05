@@ -16,13 +16,12 @@ int main() {
     //Проинициализируем созданные массивы
     for (int i = 0; i < N; ++i)
     {
-        arr_1[i] = 1;
+        arr_1[i] = i + 1;
         arr_2[i] = i;
         res[i] = 0;
     }
 
     int index;
-    start = omp_get_wtime();
 
     // Создание параллельной области
     #pragma omp parallel shared(index)
@@ -30,27 +29,21 @@ int main() {
         //Раздадим итерации цикла последовательными порциями
         #pragma omp for schedule(static)
             for (index = 0; index < N; ++index)
-                res[index] = arr_1[index] + arr_2[index];
+                res[index] = arr_1[index] * arr_2[index];
     }
 
-    end = omp_get_wtime();
-    diff = end - start;
-    std::cout << diff << std::endl;
-
-    //Проверим правильность работы программы
-    int err = 0;
-    for (int i = 0; i < N; ++i) {
-        if (res[i] != i + 1) {
-            err++;
-            std::cout << i << ": " << res[i];
-        }
+    for(int i = 0; i < N; i++) {
+        std::cout << arr_1[i] << " ";
     }
-
-    if (err) {
-        std::cout << "Wrong program, num errors: " << err << std::endl;
-    } else {
-        std::cout << "Good" << std::endl;
+    std::cout << std::endl;
+    for(int i = 0; i < N; i++) {
+        std::cout << arr_2[i] << " ";
     }
+    std::cout << std::endl;
+    for(int i = 0; i < N; i++) {
+        std::cout << res[i] << " ";
+    }
+    std::cout << std::endl;
 
     delete[] arr_1;
     delete[] arr_2;

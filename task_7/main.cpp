@@ -4,7 +4,7 @@
 #include <ctime>
 
 const int RandomLimit = 10;
-const bool Print = false;
+const bool Print = true;
 
 std::vector<std::vector<int>> create_random_matrix(int);
 std::vector<std::vector<int>> create_empty_matrix(int);
@@ -38,8 +38,8 @@ int main() {
     {
         #pragma omp for schedule(static)
             for (int i = 0; i < N; ++i) {
-                for (int j = 0; j < N; ++j) {
-                    for (int k = 0; k < N; ++k) {
+                for (int k = 0; k < N; ++k) {
+                    for (int j = 0; j < N; ++j) {
                         result[i][j] += matrix_1[i][k] * matrix_2[k][j];
                     }
                 }

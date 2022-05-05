@@ -1,6 +1,7 @@
 #include <iostream>
 #include <omp.h>
 #include <vector>
+#include <cmath>
 
 int main() {
     int N, M, K;

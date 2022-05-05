@@ -4,7 +4,7 @@
 #include <ctime>
 
 const int RandomLimit = 10000;
-const bool Print = false;
+const bool Print = true;
 
 std::vector<std::vector<int>> create_random_matrix(int);
 

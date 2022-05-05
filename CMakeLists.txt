@@ -3,7 +3,7 @@ project(lab_5)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_BUILD_TYPE RELEASE)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++23 -openmp")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp")
 
 add_executable(task_0 task_0/main.cpp)
 add_executable(task_1 task_1/main.cpp)
