@@ -4,7 +4,6 @@
 int main() {
     int N;
     int *arr_1, *arr_2, *res;
-    double start, end, diff;
 
     std::cout << "Enter N: ";
     std::cin >> N;
